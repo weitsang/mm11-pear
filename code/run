@@ -1,0 +1,16 @@
+#!/bin/bash
+
+for i in freebies_11_Mar_2008 
+	freebies_24_Oct_2008\
+	freebies_25_Dec_2008\
+	freebies_27_Mar_2009\
+	freebies_9_Jan_2009\
+	isis_28_Mar_2008\
+	isis_29_Mar_2008\
+	isis_30_Mar_2008\
+	isis_31_Mar_2008\
+	pharm_5_Mar_2008\
+	ross_11_Mar_2008
+do
+	python similarity.py ../data/${i}.txt | python count_peers_with_similarity.py > peers_${i}.txt
+done
